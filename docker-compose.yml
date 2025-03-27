@@ -1,0 +1,15 @@
+services:
+  neo4j:
+    image: neo4j:5.12
+    container_name: neo4j-db
+    ports:
+      - "7474:7474"  # Neo4j Web 界面
+      - "7687:7687"  # Bolt 協議連接
+    environment:
+      - NEO4J_AUTH=${NEO4J_USERNAME}/${NEO4J_PASSWORD}
+    volumes:
+      - neo4j_data:/data
+      - neo4j_logs:/logs
+volumes:
+  neo4j_data:
+  neo4j_logs:

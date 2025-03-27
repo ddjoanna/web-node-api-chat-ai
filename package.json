@@ -1,0 +1,34 @@
+{
+  "name": "web-node-api-chat-ai",
+  "version": "1.0.0",
+  "main": "src/server.mjs",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.mjs",
+    "dev": "npx nodemon src/server.mjs",
+    "swagger": "node src/swagger.mjs",
+    "import": "node src/import.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "chatbot",
+    "neo4j",
+    "nodejs"
+  ],
+  "author": "ddjoanna",
+  "description": "A Node.js API for chatbot with Neo4j integration",
+  "dependencies": {
+    "axios": "^1.8.4",
+    "cors": "^2.8.5",
+    "csvtojson": "^2.0.10",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "lru-cache": "^11.1.0",
+    "neo4j-driver": "^5.28.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  }
+}
