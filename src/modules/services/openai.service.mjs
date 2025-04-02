@@ -27,7 +27,7 @@ class OpenAIService {
       const response = await axios.post(
         "https://api.openai.com/v1/chat/completions",
         {
-          model: "gpt-4o-mini",
+          model: "gpt-4o",
           messages: [
             { role: "system", content: systemPrompt },
             { role: "user", content: userInput },
@@ -69,7 +69,7 @@ class OpenAIService {
       const response = await axios.post(
         "https://api.openai.com/v1/chat/completions",
         {
-          model: "gpt-4o-mini",
+          model: "gpt-4o",
           messages: [{ role: "system", content: systemPrompt }],
         },
         { headers: { Authorization: `Bearer ${OPENAI_API_KEY}` } }
