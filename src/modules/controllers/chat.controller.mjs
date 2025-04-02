@@ -11,7 +11,7 @@ class ChatController {
       const response = await usecase.execute(message);
       res.status(200).json({ response });
     } catch (error) {
-      console.error("❌ Controller Error:", error);
+      console.error("❌ Controller Error:", error.message);
       next(error); // 傳遞錯誤給全局錯誤處理器
     }
   }

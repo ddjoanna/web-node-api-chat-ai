@@ -33,7 +33,7 @@ async function resetIndexes(session) {
       console.log(`成功建立索引: ${query}`);
     }
   } catch (error) {
-    console.error("索引重建失敗:", error);
+    console.error("索引重建失敗:", error.message);
   }
 }
 
@@ -43,7 +43,7 @@ async function resetNodes(session) {
     await session.run("MATCH (n) DETACH DELETE n;");
     console.log("所有節點已刪除");
   } catch (error) {
-    console.error("節點刪除失敗:", error);
+    console.error("節點刪除失敗:", error.message);
   }
 }
 
@@ -81,13 +81,13 @@ async function executeCypherFromFile(session) {
         await session.run(query);
         console.log(`成功執行查詢：${query}`);
       } catch (error) {
-        console.error(`執行查詢失敗：${query}`, error);
+        console.error(`執行查詢失敗：${query}`, error.message);
       }
     }
 
     console.log("所有查詢已執行完成");
   } catch (error) {
-    console.error("讀取檔案或執行查詢失敗:", error);
+    console.error("讀取檔案或執行查詢失敗:", error.message);
   }
 }
 

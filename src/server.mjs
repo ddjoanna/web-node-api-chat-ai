@@ -29,7 +29,7 @@ app.get("/test-neo4j", async (req, res) => {
     const result = await session.run("RETURN 'Neo4j Connected' AS message");
     res.json({ message: result.records[0].get("message") });
   } catch (error) {
-    console.error("Neo4j connection error:", error);
+    console.error("Neo4j connection error:", error.message);
     res.status(500).json({ error: "Neo4j connection failed" });
   } finally {
     await session.close();

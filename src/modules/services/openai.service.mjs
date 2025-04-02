@@ -40,7 +40,7 @@ class OpenAIService {
       cache.set(cacheKey, content);
       return content;
     } catch (error) {
-      console.error("AI 回應失敗:", error);
+      console.error("AI 回應失敗:", error.message);
       return null;
     }
   }
@@ -79,7 +79,7 @@ class OpenAIService {
       cache.set(cacheKey, content);
       return content;
     } catch (error) {
-      console.error("AI 回應失敗:", error);
+      console.error("AI 回應失敗:", error.message);
       return null;
     }
   }

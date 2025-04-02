@@ -24,7 +24,7 @@ class Neo4jService {
       cache.set(cacheKey, result);
       return result;
     } catch (error) {
-      console.error("Neo4j 查詢錯誤:", error);
+      console.error("Neo4j 查詢錯誤:", error.message);
       return null;
     } finally {
       await session.close();

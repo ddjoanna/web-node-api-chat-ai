@@ -41,7 +41,7 @@ class ChatUsecase {
 
       return "很抱歉，這方面的資訊我無法提供";
     } catch (error) {
-      console.error("聊天用例执行错误:", error);
+      console.error("聊天用例执行错误:", error.message);
       return "很抱歉，發生錯誤。請稍後再試";
     }
   }
