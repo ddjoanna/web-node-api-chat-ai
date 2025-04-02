@@ -30,7 +30,8 @@
                 "properties": {
                   "message": {
                     "type": "string",
-                    "description": "訊息"
+                    "description": "訊息",
+                    "default": "我購買的筆電過熱"
                   }
                 }
               }
@@ -55,10 +56,10 @@
             }
           },
           "400": {
-            "description": "請求錯誤"
+            "description": "請輸入訊息"
           },
           "500": {
-            "description": "內部錯誤"
+            "description": "Internal Server Error"
           }
         }
       }

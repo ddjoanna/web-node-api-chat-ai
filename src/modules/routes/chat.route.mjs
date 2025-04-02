@@ -24,6 +24,7 @@ const router = express.Router();
  *               message:
  *                 type: string
  *                 description: 訊息
+ *                 default: 我購買的筆電過熱
  *     responses:
  *       200:
  *         description: 回應
@@ -36,7 +37,7 @@ const router = express.Router();
  *                   type: string
  *                   description: 回應
  *       400:
- *         description: 請輸入訊息(requestBody message)
+ *         description: 請輸入訊息
  *       500:
  *         description: Internal Server Error
  */
